@@ -10,9 +10,10 @@ let array1 = [1,3,5,6,7];
 let index = array1.findIndex(checkindex);
 
 function checkindex(i) {
-  return i == 6;
+  return i >3 ;
+
 }
-console.log(index)
+console.log('index',index)
 
 //q-3
 let string = "aeroplane";
@@ -77,12 +78,8 @@ console.log(unique);
 
 //q-8
 let arrayE3=[2,5,8,1,0]
-let resultE3=myArrayMax(array);
-function myArrayMax(arr) {
-  return Math.max.apply(null, arr);
-}
+console.log(Math.max(...arrayE3))
 
-console.log(result)
 
 //q-9
 let students=
@@ -91,7 +88,7 @@ let students=
 {"name":"aarvi"},
 ];
 students.sort((a,b)=>{
-    if (a.name>b.name){
+    if (a.name<b.name){
         return 1
     }else{
         return -1

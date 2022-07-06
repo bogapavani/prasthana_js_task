@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="time">
+        00:00:00
+    </div>
+    <div>
+        <button onclick="start()">Start</button>
+        <button onclick="stop()">Stop</button>
+        <button onclick="reset()">Reset</button>
+    </div>
+    <script>
+        let time = document.getElementById("time");
+        let seconds = 0;
+        let interval = "";
+
+        function timer() {
+            seconds = seconds + 1;
+            let hrs = Math.floor(seconds / 3600);
+            let mins = Math.floor((seconds - (hrs * 3600)) / 60);
+            let secs = seconds % 60;
+
+            if (secs < 10) secs = "0" + secs;
+            if (mins < 10) mins = "0" + mins;
+            if (hrs < 10) hrs = "0" + hrs;
+
+            time.innerText = `${hrs}:${mins}:${secs}`;
+        }
+
+        function start() {
+            interval = setInterval(timer, 1000);
+        }
+
+        function stop() {
+            clearInterval(interval);
+            interval = "";
+        }
+
+        function reset() {
+            stop();
+            seconds = 0;
+            time.textContent = '00:00:00';
+        }
+    </script>
+</body>
+
+</html>

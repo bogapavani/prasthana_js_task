@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea rows="8" cols="55" id="msg"></textarea>
+    <br />
+    <button  id="saveBtn">Save</button>
+    <button  id="clearBtn">Clear</button>
+    <script>
+       let msgE = document.getElementById("msg");
+let saveBtnE = document.getElementById("saveBtn");
+let clearBtnE = document.getElementById("clearBtn");
+
+saveBtnE.onclick = function() {
+    let msg = msgE.value;
+    localStorage.setItem("userInput", msg);
+};
+
+clearBtnE.onclick = function() {
+    localStorage.removeItem("userInput");
+};
+
+ 
+    </script>
+</body>
+</html>

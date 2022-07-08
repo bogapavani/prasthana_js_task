@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <form id="form">
+            <label>Firstname</label>
+            <input type="text" id="Firstname"><label id="firstNameErr"></label><br><br>
+            <label>Lastname</label>
+            <input type="text" id="Lastname"><br><br>
+            <label>Email</label>
+            <input type="email" id="Email"><label id="EmailErr"></label><br><br>
+            <label>Mobile</label>
+            <input id="Mobile"><label id="MobileErr"></label><br><br>
+            <label>Address</label><br>
+            <textarea type="text"></textarea><br>
+            <button>
+                submit
+            </button>
+        </form>
+    </div>
+    <script>
+        let FirstnameE = document.getElementById("Firstname");
+        let LastnameE = document.getElementById("LastnameE");
+        let EmailE = document.getElementById("Email");
+        let MobileE = document.getElementById("Mobile");
+        let AddressE = document.getElementById("Address");
+        let formE = document.getElementById("form");
+        let firstNameErrE = document.getElementById("firstNameErr");
+        let EmailErrE = document.getElementById("EmailErr");
+        let MobileErrE = document.getElementById("MobileErr");
+
+        function validateForm() {
+
+            if (FirstnameE.value === "") {
+                firstNameErrE.textContent = "Required minimum 3 letters";
+            } else if (FirstnameE.value.length < 3) {
+                firstNameErrE.textContent = "Required minimum 3 letters";
+            } else if ((FirstnameE.value).match(/^[A-Za-z]+$/))
+                true;
+            else {
+                firstNameErrE.textContent = "Required minimum 3 letters and alphabet";
+                return false;
+            }
+            if ((/^([a-z 0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/).test(EmailE.value)) {
+                true;
+            } else {
+                EmailErrE.textContent = "required email"
+            }
+            if ((MobileE.value).length !== 10) {
+                MobileErrE.textContent = "Required min 10 numbers";
+            } else if ((/^[0-9]+$/).match(MobileE.value))
+                true;
+            else {
+                MobileErrE.textContent = "Required only numbers";
+                return false;
+            }
+        }
+
+        formE.addEventListener("submit", function (event) {
+            event.preventDefault();
+            validateForm();
+        });
+    </script>
+</body>
+
+</html>

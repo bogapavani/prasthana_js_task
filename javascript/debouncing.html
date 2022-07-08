@@ -13,7 +13,7 @@
     <input id="myInput" type="text">
     <script>
         let myInputE = document.getElementById("myInput");
-        function helloWorld() {
+        function first() {
             console.log(myInputE.value)
         }
         function debounce(callback, delay) {
@@ -24,7 +24,7 @@
             }
         }
         const myInput = document.getElementById("myInput");
-        myInput.addEventListener("keyup", debounce(helloWorld, 2000));
+        myInput.addEventListener("keyup", debounce(first, 2000));
     </script>
 </body>
 

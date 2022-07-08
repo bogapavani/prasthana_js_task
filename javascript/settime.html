@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Set</title>
+    <link rel="stylesheet" href="setting.css">
+</head>
+
+<body>
+    <div>
+        <h1>Stopwatch</h1>
+        <p><span id="milliseconds">00s</span>:<span id="seconds">00ms</span>:<span id="milliseconds">00mints</span></p>
+        <button id="button-start">Start</button>
+        <button id="button-stop">Stop</button>
+        <button id="button-reset">Reset</button>
+    </div>
+    <script>
+        window.onload = function () {
+
+            var milliseconds = 00;
+            var seconds = 00;
+            var appendseconds = document.getElementById("seconds")
+            var appendmilliseconds = document.getElementById("milliseconds")
+            var buttonStart = document.getElementById('button-start');
+            var buttonStop = document.getElementById('button-stop');
+            var buttonReset = document.getElementById('button-reset');
+            var Interval;
+
+            buttonStart.onclick = function () {
+
+                clearInterval(Interval);
+                Interval = setInterval(startTimer, 3600);
+            }
+
+            buttonStop.onclick = function () {
+                clearInterval(Interval);
+            }
+
+
+            buttonReset.onclick = function () {
+                clearInterval(Interval);
+                seconds = "00";
+                milliseconds = "00";
+                appendseconds.innerHTML = seconds;
+                appendmilliseconds.innerHTML = milliseconds;
+            }
+
+
+
+            function startTimer() {
+                seconds++;
+
+                if (seconds <= 9) {
+                    appendseconds.innerHTML = "0" + seconds;
+                }
+
+                if (seconds > 9) {
+                    appendseconds.innerHTML = seconds;
+
+                }
+
+                if (seconds > 99) {
+                    console.log("milliseconds");
+                    milliseconds++;
+                    appendmilliseconds.innerHTML = "0" + milliseconds;
+                    seconds = 0;
+                    appendseconds.innerHTML = "0" + 0;
+                }
+
+                if (milliseconds > 9) {
+                    appendmilliseconds.innerHTML = milliseconds;
+                }
+
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

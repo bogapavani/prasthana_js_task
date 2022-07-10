@@ -1,0 +1,133 @@
+.gourmetLogo {
+    height: 100px;
+}
+.navBar{
+    height:90px;
+    background-color: #006341;
+}
+
+.bannerSectionOurRecipe {
+    background-position: center;
+    background-image: url("https://cf-store.widencdn.net/mccormick/c/0/7/c07dcccb-db2e-4b63-94fa-c50af9bbc270.jpg?response-content-disposition=inline%3B%20filename%3D%22recipe_lander_4.jpg%22&Expires=1656067590&Signature=DKc~gORfAvLu7Hxg8BOEfogrzaZHV9lmCli1IkLVwkKvI1l6luvx57XpF7d3Ctu498crqr5E2i~mFieFM2rZXB8ez9qn5PMWL~mXjhbTlk4zADWCgCIOUwew6JCQtNUd7Nl7YfvcE-XkiuY1i1uVjsAEdGRLAIs1k77x9gIoXeOWGW14KTuZKPnQDQcgR61tTcVUt2KgA0bpnaBB56aYRXHrVMnYujLBtqCWAyb5Jzc-UEWjd3IXRKCtfrgthv0xCC8uuQs8ymxjOHzWnw1Bgu7avxxSXRA4egrAKQU9k8OV6K51QxBl0BDm1xkfIgyJOg0x6ePT5D6HSERcFFfhCA__&Key-Pair-Id=APKAJD5XONOBVWWOA65A");
+    background-size: cover;
+    height: 80vh;
+}
+
+.bannerSectionOurStory {
+    background-position: center;
+    background-image: url("https://cf-store.widencdn.net/mccormick/0/0/d/00d08c5b-5c05-4969-931d-b37c5a28de26.jpg?response-content-disposition=inline%3B%20filename%3D%22our_story_header3.jpg%22&Expires=1656312242&Signature=JPRx1wotqYXSfAM1zmJkD~jL8paXIJAbq8QTp8jlD3DSjcbwFtyEYz3k9AZxZMVgJyw7OkLnf1Zi5fHWWsGDVM-XALOtWdOHVg10QIdNYfJful192r8NjN5qkLxvb1PqONo7755GQgk3ERwPZGGK0su4543wEgVavi~NTecIzKKlBRrZqVnQyC4osAVYly8oxsFNg4NTCHYY17~4sY05v1fF6LPaPviJeKnBF1QgtAM1FnTjBONqJ~F~Go-~uMVE~frdNUq~GXJe2PMVNHMY2YQdSR6wRh-dwmoqdmosTSaItoCTkdJJmjJEXE84YtTB0sUJx2uYNnWJvb6vdW-4Lw__&Key-Pair-Id=APKAJD5XONOBVWWOA65A");
+    background-size: cover;
+    height: 80vh;
+}
+
+.bannerSectionOurProduct {
+    background-position: center;
+    background-image: url("https://d1e3z2jco40k3v.cloudfront.net/-/media/project/oneweb/gg21/gg2021-products/gourmet-garden-profuct-family-us-v2.jpg?rev=4784db7c80f646ffb1fafc9ea7b14dcb&vd=20210522T044612Z&extension=webp&hash=3E6FDA4C5719C17CA884FDFBC6A816D6");
+    background-size: cover;
+    height: 80vh;
+}
+
+.cardSize {
+    background-size: cover;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.menu-item-card1 {
+    background-image: url("Appetizers.jpg");
+}
+
+.menu-item-card2 {
+    background-image: url("Salads.jpg");
+}
+
+.menu-item-card3 {
+    background-image: url("SoupsandStews.jpg");
+}
+
+.menu-item-card4 {
+    background-image: url("Entrees.jpg");
+}
+
+.menu-item-card5 {
+    background-image: url("Pasta.jpg");
+}
+
+.menu-item-card6 {
+    background-image: url("Drinks & Smoothies.jpg");
+}
+
+.menu-item-card7 {
+    background-image: url("Side Dishes.jpg");
+}
+
+.menu-item-card8 {
+    background-image: url("Desserts.jpg");
+}
+
+.menu-card-title {
+    padding-top: 15px;
+    padding-left: 20px;
+    font-size: 30px;
+}
+
+.title-bg {
+    background: rgba(0, 0, 0, .6);
+    width: 700px;
+    height: 150px;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.ourImageLogo {
+    height: 400px;
+}
+
+.ourImageLogoXs{
+    height: 400px;
+    width:100%;
+}
+
+.farmSectionBg {
+    background-color: rgb(134, 128, 120);
+}
+
+.productsBackground {
+    background: rgba(0, 0, 0, .2);
+    height: 120px;
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.productsLogo {
+    height: 300px;
+    width: 170px;
+    padding-bottom: 100px;
+}
+
+.productTitle {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.error-message {
+    color: #dc3545;
+    font-family: "Roboto";
+    font-size: 14px;
+}
+.readMoreBtn{
+    background-color:#006341;
+    border:0px;
+    height:40px;
+    width:120px;
+}
+
+@media only screen and (max-width: 900px) {
+    .bg-toggle{
+     background-color:lightsteelblue; 
+   }
+}
+.ourStoryHeadings{
+    font-size: 25px;
+}
